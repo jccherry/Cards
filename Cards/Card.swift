@@ -11,8 +11,20 @@ import UIKit
 
 class Card {
     
-    init() {
-        
+    
+    var fullName: String
+    var suit: String
+    var letterVal: Character
+    var image: UIImage
+    var bjVal: Int
+    var isAce: Bool = false
+    
+    init(fullName: String, suit: String, letterVal: Character, image: UIImage, bjVal: Int) {
+        self.fullName = fullName
+        self.suit = suit
+        self.letterVal = letterVal
+        self.image = image
+        self.bjVal = bjVal
     }
     
 }
