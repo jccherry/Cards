@@ -12,8 +12,8 @@
 		52EB92D21E0CE75A0094344E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EB92D01E0CE75A0094344E /* Main.storyboard */; };
 		52EB92D41E0CE75A0094344E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52EB92D31E0CE75A0094344E /* Assets.xcassets */; };
 		52EB92D71E0CE75A0094344E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EB92D51E0CE75A0094344E /* LaunchScreen.storyboard */; };
-		52EB92E21E0CE75A0094344E /* CardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB92E11E0CE75A0094344E /* CardsTests.swift */; };
-		52EB92ED1E0CE75A0094344E /* CardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB92EC1E0CE75A0094344E /* CardsUITests.swift */; };
+		52EB92FD1E0CE8780094344E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB92FC1E0CE8780094344E /* Card.swift */; };
+		52EB92FF1E0CE8A40094344E /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB92FE1E0CE8A40094344E /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,9 @@
 		52EB92D61E0CE75A0094344E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52EB92D81E0CE75A0094344E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EB92DD1E0CE75A0094344E /* CardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52EB92E11E0CE75A0094344E /* CardsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTests.swift; sourceTree = "<group>"; };
-		52EB92E31E0CE75A0094344E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52EB92E81E0CE75A0094344E /* CardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52EB92EC1E0CE75A0094344E /* CardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsUITests.swift; sourceTree = "<group>"; };
-		52EB92EE1E0CE75A0094344E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EB92FC1E0CE8780094344E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		52EB92FE1E0CE8A40094344E /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				52EB92CB1E0CE75A0094344E /* Cards */,
-				52EB92E01E0CE75A0094344E /* CardsTests */,
-				52EB92EB1E0CE75A0094344E /* CardsUITests */,
 				52EB92CA1E0CE75A0094344E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,26 +99,18 @@
 				52EB92D31E0CE75A0094344E /* Assets.xcassets */,
 				52EB92D51E0CE75A0094344E /* LaunchScreen.storyboard */,
 				52EB92D81E0CE75A0094344E /* Info.plist */,
+				52EB93001E0CE8C80094344E /* Cards Library */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
 		};
-		52EB92E01E0CE75A0094344E /* CardsTests */ = {
+		52EB93001E0CE8C80094344E /* Cards Library */ = {
 			isa = PBXGroup;
 			children = (
-				52EB92E11E0CE75A0094344E /* CardsTests.swift */,
-				52EB92E31E0CE75A0094344E /* Info.plist */,
+				52EB92FC1E0CE8780094344E /* Card.swift */,
+				52EB92FE1E0CE8A40094344E /* Deck.swift */,
 			);
-			path = CardsTests;
-			sourceTree = "<group>";
-		};
-		52EB92EB1E0CE75A0094344E /* CardsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				52EB92EC1E0CE75A0094344E /* CardsUITests.swift */,
-				52EB92EE1E0CE75A0094344E /* Info.plist */,
-			);
-			path = CardsUITests;
+			name = "Cards Library";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +250,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EB92FF1E0CE8A40094344E /* Deck.swift in Sources */,
 				52EB92CF1E0CE75A0094344E /* ViewController.swift in Sources */,
+				52EB92FD1E0CE8780094344E /* Card.swift in Sources */,
 				52EB92CD1E0CE75A0094344E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,7 +261,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EB92E21E0CE75A0094344E /* CardsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52EB92ED1E0CE75A0094344E /* CardsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
