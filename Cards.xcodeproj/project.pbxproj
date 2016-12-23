@@ -14,6 +14,8 @@
 		52EB92D71E0CE75A0094344E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52EB92D51E0CE75A0094344E /* LaunchScreen.storyboard */; };
 		52EB92FD1E0CE8780094344E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB92FC1E0CE8780094344E /* Card.swift */; };
 		52EB92FF1E0CE8A40094344E /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB92FE1E0CE8A40094344E /* Deck.swift */; };
+		52EB93021E0CFD460094344E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB93011E0CFD460094344E /* Player.swift */; };
+		52EB93061E0CFE430094344E /* NLHE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EB93051E0CFE430094344E /* NLHE.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		52EB92E81E0CE75A0094344E /* CardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52EB92FC1E0CE8780094344E /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		52EB92FE1E0CE8A40094344E /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		52EB93011E0CFD460094344E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		52EB93051E0CFE430094344E /* NLHE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NLHE.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +111,10 @@
 		52EB93001E0CE8C80094344E /* Cards Library */ = {
 			isa = PBXGroup;
 			children = (
+				52EB93011E0CFD460094344E /* Player.swift */,
 				52EB92FC1E0CE8780094344E /* Card.swift */,
 				52EB92FE1E0CE8A40094344E /* Deck.swift */,
+				52EB93051E0CFE430094344E /* NLHE.swift */,
 			);
 			name = "Cards Library";
 			sourceTree = "<group>";
@@ -253,6 +259,8 @@
 				52EB92FF1E0CE8A40094344E /* Deck.swift in Sources */,
 				52EB92CF1E0CE75A0094344E /* ViewController.swift in Sources */,
 				52EB92FD1E0CE8780094344E /* Card.swift in Sources */,
+				52EB93061E0CFE430094344E /* NLHE.swift in Sources */,
+				52EB93021E0CFD460094344E /* Player.swift in Sources */,
 				52EB92CD1E0CE75A0094344E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

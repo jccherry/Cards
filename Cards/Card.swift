@@ -27,4 +27,28 @@ class Card {
         self.bjVal = bjVal
     }
     
+    let spadeSymbol = "♠"
+    let clubSymbol = "♣"
+    let diamondSymbol = "♦"
+    let heartSymbol = "♥"
+    
+    func shortName() -> String {
+        
+        var symbol: String = ""
+        
+        if suit == "Spades" {
+            symbol = spadeSymbol
+        } else if suit == "Clubs" {
+            symbol = clubSymbol
+        } else if suit == "Diamonds" {
+            symbol = diamondSymbol
+        } else if suit == "Hearts"{
+            symbol = heartSymbol
+        } else {
+            symbol = "💩"
+        }
+        
+        return "\(letterVal)\(symbol)"
+    }
+    
 }

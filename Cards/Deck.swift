@@ -13,12 +13,8 @@ class Deck {
     
     var backImage: UIImage
     
-    init(backImage: UIImage) {
-        self.backImage = backImage
-    }
-    
-    //aces at index 12 + 12n
-    let cards: [Card] = [
+    //aces at index 12 + 13n
+    var cards: [Card] = [
         //spades
         Card(fullName: "Two of Spades", suit: "Spades", letterVal: "2", image: #imageLiteral(resourceName: "2_of_spades"), bjVal: 2),
         Card(fullName: "Three of Spades", suit: "Spades", letterVal: "3", image: #imageLiteral(resourceName: "3_of_spades"), bjVal: 3),
@@ -77,9 +73,50 @@ class Deck {
         Card(fullName: "Jack of Hearts", suit: "Hearts", letterVal: "J", image: #imageLiteral(resourceName: "jack_of_hearts2"), bjVal: 10),
         Card(fullName: "Queen of Hearts", suit: "Hearts", letterVal: "Q", image: #imageLiteral(resourceName: "queen_of_hearts2"), bjVal: 10),
         Card(fullName: "King of Hearts", suit: "Hearts", letterVal: "K", image: #imageLiteral(resourceName: "king_of_hearts2"), bjVal: 10),
-        Card(fullName: "Ace of Hearts", suit: "Hearts", letterVal: "A", image: #imageLiteral(resourceName: "ace_of_hearts"), bjVal: 11),
-    
-    
+        Card(fullName: "Ace of Hearts", suit: "Hearts", letterVal: "A", image: #imageLiteral(resourceName: "ace_of_hearts"), bjVal: 11)
     ]
+    
+    
+    init(backImage: UIImage) {
+        self.backImage = backImage
+        cards[51].isAce = true
+        cards[38].isAce = true
+        cards[25].isAce = true
+        cards[12].isAce = true
+    }
+    
+    func printDeck(type: String) {
+        
+        if type == "vertical" {
+            for i in 0..<cards.count {
+                print(cards[i].shortName())
+            }
+        } else {
+            for i in 0..<cards.count/4 {
+                let cardString = "\(cards[4*i].shortName())  \(cards[4*i+1].shortName())  \(cards[4*i+2].shortName())  \(cards[4*i+3].shortName())"
+                print(cardString)
+            }
+        }
+
+        
+        
+    }
+    
+    func shuffle(times: Int) {
+        var shuffledCards: [Card] = []
+        //randomly shuffles 5 times
+        for _ in 0..<times {
+            for _ in cards {
+                let pickedCardInt: Int = Int(arc4random_uniform(UInt32(cards.count)))
+                shuffledCards.append(cards[pickedCardInt])
+                cards.remove(at: pickedCardInt)
+            }
+            cards = shuffledCards
+            shuffledCards.removeAll()
+        }
+    }
+
+
+    
     
 }

@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         
         imageView.image = deck.cards[0].image
         
+        deck.printDeck(type:"")
+        print("==============")
+        deck.shuffle(times: 5)
+        deck.printDeck(type:"")
     }
 
 }
