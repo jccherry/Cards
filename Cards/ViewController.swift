@@ -23,6 +23,23 @@ class ViewController: UIViewController {
         print("==============")
         deck.shuffle(times: 5)
         deck.printDeck(type:"")
+        print("+++STARTING HAND+++")
+        
+
+        var players: [Player] = []
+        
+        for i in 1...2 {
+            players.append(Player(name: "Player \(i)"))
+        }
+        
+        let poker = NLHE(players: players)
+        
+        poker.deck.shuffle(times: 5)
+        poker.dealToPlayers()
+        poker.dealCommunityCards(times: 3)
+        poker.dealCommunityCards(times: 1)
+        poker.dealCommunityCards(times: 1)
+        poker.printHand()
     }
 
 }

@@ -11,9 +11,22 @@ import UIKit
 
 class Player {
     
-    var cards: [Card] = []
+    var holeCards: [Card] = []
+    var name: String = ""
     
     init(name: String){
-        
+        self.name = name
+    }
+    
+    func printHand(){
+        var cardString = ""
+        for card in holeCards{
+            cardString.append(card.shortName() + " ")
+        }
+        print(name + ": " + cardString)
+    }
+    
+    func handRanking(communityCards: [Card]) -> Int {
+        return 0
     }
 }

@@ -18,13 +18,15 @@ class Card {
     var image: UIImage
     var bjVal: Int
     var isAce: Bool = false
+    var cardRanking: Int = 0
     
-    init(fullName: String, suit: String, letterVal: Character, image: UIImage, bjVal: Int) {
+    init(fullName: String, suit: String, letterVal: Character, image: UIImage, bjVal: Int, ranking: Int) {
         self.fullName = fullName
         self.suit = suit
         self.letterVal = letterVal
         self.image = image
         self.bjVal = bjVal
+        self.cardRanking = ranking
     }
     
     let spadeSymbol = "♠"
